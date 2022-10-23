@@ -23,5 +23,5 @@ node_modules
 ```
 
 ```sh
-docker build -t mehradi/microservices-ticketing-auth:0.0.1 .
+docker build -t <USER>/microservices-ticketing-auth:0.0.1 .
 ```
