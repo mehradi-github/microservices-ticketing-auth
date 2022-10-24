@@ -31,4 +31,5 @@ docker logs <container id>
 docker exec -it <container id> /bin/bash
 curl -i localhost:8180
 docker kill <container id>
+docker rmi <USER>/microservices-ticketing-auth:0.0.1
 ```
