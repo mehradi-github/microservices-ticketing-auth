@@ -5,6 +5,17 @@ npm i -D typescript ts-node-dev nodemon @types/express
 
 tsc --init
 ```
+
+Setting up Node.js on an Amazon EC2 instance
+[nvm](https://github.com/nvm-sh/nvm/) allows you to quickly install and use different versions of node via the command line.
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+source ~/.bashrc
+# nvm use 16
+nvm install --lts
+node -e "console.log('Running Node.js ' + process.version)"
+```
+
 Dockerfile:
 ```dockerfile
 FROM node:alpine
@@ -44,3 +55,4 @@ kubectl describe pod <Pod_Name>
 kubectl exec -it <Pod_Name> <cmd>
 kubectl logs <Pod_name>
 ```
+

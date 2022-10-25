@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/mehradi-github/microservices-ticketing-auth#readme",
   "dependencies": {
-    "express": "^4.18.1"
-  },
-  "devDependencies": {
+    "@types/body-parser": "^1.19.2",
     "@types/express": "^4.17.14",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.3"
   }
