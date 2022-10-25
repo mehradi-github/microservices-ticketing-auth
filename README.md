@@ -44,7 +44,8 @@ docker logs <container id>
 docker exec -it <container id> /bin/bash
 curl -i localhost:8180
 docker kill <container id>
-docker rmi <USER>/microservices-ticketing-auth:0.0.1
+docker rmi <USER>/microservices-ticketing-auth:<Tag>
+docker images | awk '/<USER>/ {print $3}'| xargs docker rmi -f
 ```
 K8s world
 ```sh
