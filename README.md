@@ -22,7 +22,7 @@ CMD ["npm","start"]
 node_modules
 npm-debug.log
 ```
-Building your image and test
+Docker World (Building your image and test)
 ```sh
 docker build -t <USER>/microservices-ticketing-auth:0.0.1 .
 docker run -p 8180:3000 -d <USER>/microservices-ticketing-auth:0.0.1
@@ -32,4 +32,13 @@ docker exec -it <container id> /bin/bash
 curl -i localhost:8180
 docker kill <container id>
 docker rmi <USER>/microservices-ticketing-auth:0.0.1
+```
+K8s world
+```sh
+#kubectl run <Name> --image=<Image>
+kubectl apply -f <Config_File>
+kubectl get pods
+kubectl describe pod <Pod_Name>
+kubectl exec -it <Pod_Name> <cmd>
+kubectl logs <Pod_name>
 ```
