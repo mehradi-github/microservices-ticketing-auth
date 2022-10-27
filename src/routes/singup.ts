@@ -2,6 +2,8 @@ import express, { Request, Response } from 'express';
 import { validateRequest } from '../middlewares/validate-request';
 
 import { body, validationResult } from 'express-validator';
+import { User } from '../models/user';
+import { BadRequestError } from '../errors/bad-request-error';
 
 const router = express.Router();
 router.post(
@@ -14,8 +16,19 @@ router.post(
       .withMessage('Password must be between 4 and 20 characters'),
   ],
   validateRequest,
-  (req: Request, res: Response) => {
-    res.send('Hi there!');
+  async (req: Request, res: Response) => {
+    const { email, password } = req.body;
+
+    const existingUser = await User.findOne({ email });
+
+    if (existingUser) {
+      throw new BadRequestError('Email in use');
+    }
+
+    const user = User.build({ email, password });
+    await user.save();
+
+    res.status(201).send(user);
   }
 );
 
