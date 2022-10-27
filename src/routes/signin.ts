@@ -42,7 +42,7 @@ router.post(
       },
       process.env.JWT_KEY!
     );
-
+    console.log(userJwt);
     req.session = {
       jwt: userJwt,
     };
