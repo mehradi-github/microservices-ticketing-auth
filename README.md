@@ -1,5 +1,5 @@
 # Submodule for microservices-ticketing
-This project is Submodule for [microservices-ticketing](https://github.com/mehradi-github/microservices-ticketing)
+This project is Submodule for [**microservices-ticketing**](https://github.com/mehradi-github/microservices-ticketing)
 
 - [Submodule for microservices-ticketing](#submodule-for-microservices-ticketing)
   - [Installing prerequisite](#installing-prerequisite)
@@ -73,10 +73,10 @@ kubectl logs <Pod_name>
 Installing [eslint, prettier and configuring](https://github.com/mehradi-github/jest-rtl) them.
 
 ## VSCode's shotrcuts: Multiple Cursors :
-Ctrl + D select the next occurrence.
-Ctrl + K + Ctrl + D skip the next occurrence.
-Ctrl + U undo one of the above.
-Ctrl+Shift+L Select All Occurrences
+- Ctrl + D select the next occurrence.
+- Ctrl + K + Ctrl + D skip the next occurrence.
+- Ctrl + U undo one of the above.
+- Ctrl+Shift+L Select All Occurrences
 
 ## Ignore files that have already been committed to a Git repository
 ```git
