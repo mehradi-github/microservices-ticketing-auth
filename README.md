@@ -86,7 +86,7 @@ git add .
 git commit -m "Changing .gitignore"
 ```
 ## Testing isolated Microservices
-[Superagent](https://www.npmjs.com/package/supertest) is to provide a high-level abstraction for testing HTTP, while still allowing you to drop down to the lower-level API.
+[Supertest](https://www.npmjs.com/package/supertest) is to provide a high-level abstraction for testing HTTP, while still allowing you to drop down to the lower-level API provide by Superagent.
 
 ```sh
 npm i -D jest ts-jest supertest @types/jest @types/supertest mongodb-memory-server
