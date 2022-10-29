@@ -9,6 +9,7 @@ This project is Submodule for [**microservices-ticketing**](https://github.com/m
   - [Configuring a project for ESLint, Prettier](#configuring-a-project-for-eslint-prettier)
   - [VSCode's shotrcuts: Multiple Cursors :](#vscodes-shotrcuts-multiple-cursors-)
   - [Ignore files that have already been committed to a Git repository](#ignore-files-that-have-already-been-committed-to-a-git-repository)
+  - [Testing isolated Microservices](#testing-isolated-microservices)
 
 ## Installing prerequisite
 ```sh
@@ -83,4 +84,22 @@ Installing [eslint, prettier and configuring](https://github.com/mehradi-github/
 git rm -r --cached .
 git add .
 git commit -m "Changing .gitignore"
+```
+## Testing isolated Microservices
+[Superagent](https://www.npmjs.com/package/supertest) is to provide a high-level abstraction for testing HTTP, while still allowing you to drop down to the lower-level API.
+
+```sh
+npm i -D jest ts-jest supertest @types/jest @types/supertest mongodb-memory-server
+```
+
+```js
+# package.json
+"jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./src/test/setup.ts"
+    ]
+  },
+
 ```
